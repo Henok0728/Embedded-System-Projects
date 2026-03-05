@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 // --- Receiver Code (Manchester) ---
 const int SENSOR_PIN = A0;   // LDR connected to A0
 const int THRESHOLD = 500;   // Adjust based on your room's light
