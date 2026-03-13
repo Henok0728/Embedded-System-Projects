@@ -1,18 +1,20 @@
 #include <Arduino.h>
+
 // --- Transmitter Code ---
 const int LED_PIN = 13;    // Connect your bright LED here
 const int BIT_PERIOD = 100; // Time in milliseconds for each bit
-
+void sendByte(char c);
 void setup() {
   pinMode(LED_PIN, OUTPUT);
   Serial.begin(9600);
   Serial.println("Transmitter Ready. Type a character to send:");
 }
-
 void loop() {
   if (Serial.available() > 0) {
     char data = Serial.read(); // Get character from Serial Monitor
     sendByte(data);
+    Serial.print("Sent: ");
+    Serial.println(data);
   }
 }
 
@@ -25,6 +27,7 @@ void sendByte(char c) {
   for (int i = 0; i < 8; i++) {
     bool bit = (c >> i) & 0x01; // Extract each bit (LSB first)
     digitalWrite(LED_PIN, bit ? HIGH : LOW);
+    Serial.print(bit ? "1" : "0"); // Optional: Print the bit being sent
     delay(BIT_PERIOD);
   }
 
