@@ -62,12 +62,18 @@ The LCD continuously displays:
 
 ```text
 .
+├── .pio/build/
+│ 
+├── include/
+│   
 ├── images/
 │   ├── converter.gif
 │ 
 ├── src/
 │   └── main.cpp
 ├── README.md
+├── .gitignore
+├── 4Bit DC Signal Generator/src/Embedded-System-Projects.code-workspace
 ```
 
 ---
@@ -77,7 +83,7 @@ The LCD continuously displays:
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/yourusername/4-bit-digital-voltage-generator.git
+git clone https://github.com/Henok0728/4-bit-digital-voltage-generator.git
 ```
 
 2. Open the project in the Arduino IDE.
