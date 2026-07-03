@@ -8,7 +8,7 @@ A **4-bit Digital-to-Analog Converter (DAC)** built using an **Arduino Nano**, a
 ## 🎥 Demo
 
 <p align="center">
-  <img src="images/converter.gif" width="700" alt="4-Bit Digital Voltage Generator Demo">
+ <img src="https://raw.githubusercontent.com/Henok0728/Embedded-System-Projects/main/4Bit%20DC%20Signal%20Generator/images/converter.gif" width="700" alt="4-Bit Digital Voltage Generator Demo">fix
 </p>
 
 ---
