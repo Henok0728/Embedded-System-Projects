@@ -7,7 +7,7 @@ A **4-bit Digital-to-Analog Converter (DAC)** built using an **Arduino Nano**, a
 ## 🎥 Demo
 
 <p align="center">
- <img src="https://raw.githubusercontent.com/Henok0728/Embedded-System-Projects/main/4Bit%20DC%20Signal%20Generator/images/converter.gif" width="700" alt="4-Bit Digital Voltage Generator Demo">fix
+ <img src="https://raw.githubusercontent.com/Henok0728/Embedded-System-Projects/main/4Bit%20DC%20Signal%20Generator/images/converter.gif" width="700" alt="4-Bit Digital Voltage Generator Demo">
 </p>
 
 ---
@@ -82,7 +82,7 @@ The LCD continuously displays:
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/Henok0728/4-bit-digital-voltage-generator.git
+git clone git clone https://github.com/Henok0728/Embedded-System-Projects.git
 ```
 
 2. Open the project in the Arduino IDE.
