@@ -13,10 +13,13 @@ const int UP = 2;
 const int DOWN = 3;
 
 int counter = 0;
-
+int direction = 1; // 1 for up, -1 for down
 void up_counter();
 void down_counter();
+void DC_MODE();
+void Triangle_MODE();
 void lcd_display();
+void writeDAC(int value);   
 void setup() {
     pinMode(UP, INPUT_PULLUP);
     pinMode(DOWN, INPUT_PULLUP);
@@ -30,21 +33,8 @@ void setup() {
 }
 
 void loop() {
-    lcd_display();
-    if (digitalRead(UP) == LOW) {
-        up_counter();
-        delay(200);       // debounce
-    }
 
-    if (digitalRead(DOWN) == LOW) {
-        down_counter();
-        delay(200);       // debounce
-    }
-
-    digitalWrite(D9, counter & 0x01);
-    digitalWrite(D10, (counter >> 1) & 0x01);
-    digitalWrite(D11, (counter >> 2) & 0x01);
-    digitalWrite(D12, (counter >> 3) & 0x01);
+    Triangle_MODE();
 }
 
 void up_counter() {
@@ -65,4 +55,36 @@ void lcd_display() {
     lcd.print("Voltage: ");
     lcd.print(out_voltage, 2);
     lcd.print(" V");
+}
+void DC_MODE() {
+    if (digitalRead(UP) == LOW) {
+        up_counter();
+        delay(200);       // debounce
+    }
+
+    if (digitalRead(DOWN) == LOW) {
+        down_counter();
+        delay(200);       // debounce
+    }
+
+    digitalWrite(D9, counter & 0x01);
+    digitalWrite(D10, (counter >> 1) & 0x01);
+    digitalWrite(D11, (counter >> 2) & 0x01);
+    digitalWrite(D12, (counter >> 3) & 0x01);
+}
+void writeDAC(int value) {
+    digitalWrite(D9, value & 0x01);
+    digitalWrite(D10, (value >> 1) & 0x01);
+    digitalWrite(D11, (value >> 2) & 0x01);
+    digitalWrite(D12, (value >> 3) & 0x01);
+}
+void Triangle_MODE() {
+    counter += direction;
+
+    if (counter >= 15) direction = -1;
+    if (counter <= 0)  direction = 1;
+
+    writeDAC(counter);
+
+    delayMicroseconds(100);  // controls frequency
 }
