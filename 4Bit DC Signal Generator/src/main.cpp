@@ -58,10 +58,10 @@ void down_counter() {
 }
 void lcd_display() {
     lcd.setCursor(0, 0);
-    lcd.print("Digtal voltage display");
+    lcd.print("4 bit digital voltage display");
     lcd.setCursor(0, 1);
     int temp = counter;
-    double out_voltage = (double)(temp * 5.0) / 15.0 * 5.0;
+    double out_voltage = (double)(temp * 5.0) / 15.0;
     lcd.print("Voltage: ");
     lcd.print(out_voltage, 2);
     lcd.print(" V");
