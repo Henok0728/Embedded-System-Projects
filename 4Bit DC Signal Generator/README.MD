@@ -58,17 +58,16 @@ The LCD continuously displays:
 
 ---
 
-## 📂 Project Structure
+## 📂 Main Project Structure
 
 ```text
 .
 ├── images/
 │   ├── converter.gif
-│   └── circuit.png
+│ 
 ├── src/
-│   └── voltage_generator.ino
+│   └── main.cpp
 ├── README.md
-└── LICENSE
 ```
 
 ---
@@ -86,16 +85,6 @@ git clone https://github.com/yourusername/4-bit-digital-voltage-generator.git
 4. Upload the sketch to the Arduino Nano.
 5. Assemble the hardware according to the circuit diagram.
 6. Power the circuit and begin generating output voltages.
-
----
-
-## 📸 Circuit Diagram
-
-<p align="center">
-  <img src="images/circuit.png" width="700" alt="Circuit Diagram">
-</p>
-
----
 
 ## 📈 Future Improvements
 
