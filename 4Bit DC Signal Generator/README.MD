@@ -8,7 +8,7 @@ A simple **4-bit Digital-to-Analog Converter (DAC)** built using an **Arduino Na
 ## 🎥 Demo
 
 <p align="center">
-  <img src="images/demo.gif" width="700" alt="Project Demo">
+  <img src="images/converter.gif" width="700" alt="Project Demo">
 </p>
 
 > Replace `images/demo.gif` with your own demonstration GIF.
