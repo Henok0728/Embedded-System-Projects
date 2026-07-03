@@ -58,7 +58,7 @@ void down_counter() {
 }
 void lcd_display() {
     lcd.setCursor(0, 0);
-    lcd.print("4 bit digital voltage display");
+    lcd.print("4Bit DC Signal Generator");
     lcd.setCursor(0, 1);
     int temp = counter;
     double out_voltage = (double)(temp * 5.0) / 15.0;
