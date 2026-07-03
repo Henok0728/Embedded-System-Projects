@@ -107,4 +107,3 @@ git clone git clone https://github.com/Henok0728/Embedded-System-Projects.git
 **Henok**
 
 If you found this project useful, consider giving it a ⭐ on GitHub!
-````
