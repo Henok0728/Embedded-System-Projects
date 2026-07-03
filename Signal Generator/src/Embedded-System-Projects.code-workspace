@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Embedded-System-Projects",
+			"path": "../.."
+		},
+		{
+			"name": "4Bit DC Signal Generator",
+			"path": "../../../../OneDrive/Documents/PlatformIO/Projects/4Bit DC Signal Generator"
+		}
+	],
+	"settings": {}
+}
