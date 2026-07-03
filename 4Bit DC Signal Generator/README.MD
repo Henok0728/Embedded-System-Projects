@@ -1,39 +1,42 @@
+````markdown
 # 🔌 4-Bit Digital Voltage Generator
 
-A **4-bit Digital-to-Analog Converter (DAC)** built using an **Arduino Nano**, an **R-2R resistor ladder**, and a **20×4 I2C LCD**. The system generates **16 discrete analog voltage levels (0–15)** from digital inputs and displays the selected binary value, decimal value, and output voltage in real time.
+A **4-bit Digital-to-Analog Converter (DAC)** built using an **Arduino Nano**, an **R-2R resistor ladder**, and a **20×4 I2C LCD**. This project generates **16 discrete analog voltage levels (0–15)** from digital inputs and displays the selected binary value, decimal value, and output voltage in real time.
 
 ---
 
 ## 🎥 Demo
 
 <p align="center">
- <img src="https://raw.githubusercontent.com/Henok0728/Embedded-System-Projects/main/4Bit%20DC%20Signal%20Generator/images/converter.gif" width="700" alt="4-Bit Digital Voltage Generator Demo">
+  <img src="images/converter.gif" width="700" alt="4-Bit Digital Voltage Generator Demo">
 </p>
 
 ---
 
 ## ✨ Features
 
-- Generates **16 discrete analog voltage levels**
-- Implements a **4-bit R-2R resistor ladder DAC**
-- Push-button interface for incrementing and decrementing the output value
-- Real-time display on a **20×4 I2C LCD**
+- 4-bit Digital-to-Analog Converter (DAC)
+- 16 discrete analog voltage levels
+- R-2R resistor ladder implementation
+- Push-button interface for increasing and decreasing the output value
+- Real-time voltage display on a 20×4 I2C LCD
 - Displays:
   - Binary value
   - Decimal value
-  - Analog output voltage
-- Simple, low-cost hardware design
-- Easily expandable to higher DAC resolutions (8-bit, 10-bit, etc.)
+  - Output voltage
+- Built with inexpensive and readily available components
+- Easily expandable to 8-bit or higher DAC resolution
 
 ---
 
 ## 🛠 Hardware Used
 
 - Arduino Nano
-- 20×4 I2C LCD
+- 20×4 I2C LCD (I2C Interface)
 - R-2R resistor ladder
-- Push buttons
-- 10 kΩ and 20 kΩ resistors
+- 2 × Push buttons
+- 10 kΩ resistors
+- 20 kΩ resistors
 - Breadboard
 - Jumper wires
 - USB cable / 5 V power supply
@@ -42,9 +45,9 @@ A **4-bit Digital-to-Analog Converter (DAC)** built using an **Arduino Nano**, a
 
 ## ⚙️ How It Works
 
-The Arduino outputs a **4-bit binary number** through four digital output pins connected to an **R-2R resistor ladder**. The resistor ladder converts the digital signal into a proportional analog voltage.
+The Arduino Nano outputs a 4-bit binary value through four digital output pins connected to an R-2R resistor ladder. The resistor ladder converts the digital value into a proportional analog voltage.
 
-Two push buttons allow the user to:
+Two push buttons are used to:
 
 - Increase the digital value
 - Decrease the digital value
@@ -57,48 +60,76 @@ The LCD continuously displays:
 
 ---
 
-## 📂 Main Project Structure
+## 📂 Project Structure
 
 ```text
-.
-├── .pio/build/
-│ 
-├── include/
-│   
+4Bit DC Signal Generator/
+│
 ├── images/
-│   ├── converter.gif
-│ 
+│   └── converter.gif
+│
+├── include/
+│
 ├── src/
 │   └── main.cpp
+│
+├── platformio.ini
 ├── README.md
-├── .gitignore
-├── 4Bit DC Signal Generator/src/Embedded-System-Projects.code-workspace
+└── .gitignore
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-1. Clone the repository.
+### 1. Clone the repository
 
 ```bash
-git clone git clone https://github.com/Henok0728/Embedded-System-Projects.git
+git clone https://github.com/Henok0728/Embedded-System-Projects.git
 ```
 
-2. Open the project in the Arduino IDE.
-3. Install the required libraries.
-4. Upload the sketch to the Arduino Nano.
-5. Assemble the hardware according to the circuit diagram.
-6. Power the circuit and begin generating output voltages.
+### 2. Open the project
+
+Open the **4Bit DC Signal Generator** folder using **Visual Studio Code** with the **PlatformIO** extension installed.
+
+### 3. Build and Upload
+
+- Connect the Arduino Nano.
+- Click **Build** in PlatformIO.
+- Click **Upload** to flash the firmware.
+
+### 4. Assemble the Hardware
+
+Connect the Arduino, R-2R resistor ladder, push buttons, and LCD according to your circuit.
+
+### 5. Run the Project
+
+Power the Arduino. Use the push buttons to change the digital value and observe the corresponding analog voltage on the output and LCD.
+
+---
 
 ## 📈 Future Improvements
 
-- 8-bit or higher-resolution DAC
-- Rotary encoder user interface
+- 8-bit DAC implementation
+- Rotary encoder interface
 - Adjustable reference voltage
 - Buffered op-amp output stage
-- Serial interface for PC control
-- Waveform generation (sine, square, triangle)
+- Serial control from a PC
+- Waveform generation (sine, square, and triangle)
+- PCB design
+
+---
+
+## 📚 What I Learned
+
+This project helped me gain practical experience with:
+
+- Digital-to-Analog Conversion (DAC)
+- R-2R resistor ladder design
+- Arduino digital I/O
+- LCD interfacing over I2C
+- Embedded programming using PlatformIO
+- Basic analog electronics
 
 ---
 
@@ -106,4 +137,19 @@ git clone git clone https://github.com/Henok0728/Embedded-System-Projects.git
 
 **Henok**
 
-If you found this project useful, consider giving it a ⭐ on GitHub!
+Electrical & Computer Engineering Student
+
+GitHub: https://github.com/Henok0728
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please consider giving the repository a ⭐ on GitHub. It helps others discover the project and motivates future development.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+````
