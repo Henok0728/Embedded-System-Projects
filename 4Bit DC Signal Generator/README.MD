@@ -1,4 +1,3 @@
-````markdown
 # 🔌 4-Bit Digital Voltage Generator
 
 A **4-bit Digital-to-Analog Converter (DAC)** built using an **Arduino Nano**, an **R-2R resistor ladder**, and a **20×4 I2C LCD**. The system generates **16 discrete analog voltage levels (0–15)** from digital inputs and displays the selected binary value, decimal value, and output voltage in real time.
