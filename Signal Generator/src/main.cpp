@@ -88,3 +88,16 @@ void Triangle_MODE() {
 
     delayMicroseconds(100);  // controls frequency
 }
+void Square_MODE() {
+    counter += direction;
+
+    if (counter >= 15) direction = -1;
+    if (counter <= 0)  direction = 1;
+
+    writeDAC(counter);
+
+    delayMicroseconds(100);  // controls frequency
+}
+void Sine_MODE() {
+    
+}
